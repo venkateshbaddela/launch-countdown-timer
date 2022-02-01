@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link rel="stylesheet" href="css/style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <script defer src="script.js"></script>
+    <title>Frontend Mentor | Launch countdown timer</title>
+  </head>
+  <body>
+    <div class="timer-container">
+      <h1 class="timer-container__heading">we're launching soon</h1>
+      <div class="form-wrapper">
+        <form action="#" class="form">
+          <div class="form-box">
+            <input
+              id="day"
+              type="number"
+              class="form-input form-input__day"
+              min="1"
+              max="366"
+              required
+            />
+            <label for="day" class="form-label form-label__day">Days</label>
+          </div>
+          <div class="form-box">
+            <input
+              id="hour"
+              type="number"
+              class="form-input form-input__hrs"
+              min="1"
+              max="24"
+              required
+            />
+            <label for="hour" class="form-label form-label__hrs">Hours</label>
+          </div>
+          <div class="form-box">
+            <input
+              id="minute"
+              type="number"
+              class="form-input form-input__min"
+              min="1"
+              max="59"
+              required
+            />
+            <label for="minute" class="form-label form-label__min"
+              >Minutes</label
+            >
+          </div>
+          <div class="form-box">
+            <input
+              id="second"
+              type="number"
+              class="form-input form-input__sec"
+              min="1"
+              max="59"
+              required
+            />
+            <label for="second" class="form-label form-label__sec"
+              >Seconds</label
+            >
+          </div>
+
+          <button class="form-btn" type="submit">Start CountDown</button>
+        </form>
+      </div>
+      <div class="timer-main">
+        <!-- days -->
+
+        <div class="timer-box">
+          <div class="timer">
+            <div class="timer-back timer-day">
+              <div class="timer-back__top timer-day__back">
+                <p class="timer-txt timer-day__back-txt">00</p>
+              </div>
+              <div class="timer-back__bot timer-day__back-bot">
+                <p class="timer-txt timer-day__back-txt">00</p>
+              </div>
+            </div>
+
+            <div class="timer-front timer-day">
+              <div class="timer-front__top timer-day__front">
+                <p class="timer-txt timer-day__front-txt">00</p>
+              </div>
+              <div class="timer-front__bot timer-day__front">
+                <p class="timer-txt timer-day__front-txt">00</p>
+              </div>
+            </div>
+          </div>
+          <p class="timer-box__txt">Days</p>
+        </div>
+
+        <!-- hrs -->
+
+        <div class="timer-box">
+          <div class="timer">
+            <div class="timer-back timer-hrs">
+              <div class="timer-back__top timer-hrs__back">
+                <p class="timer-hrs__back-txt timer-txt">00</p>
+              </div>
+              <div class="timer-back__bot timer-hrs__back">
+                <p class="timer-hrs__back-txt timer-txt">00</p>
+              </div>
+            </div>
+
+            <div class="timer-front timer-hrs">
+              <div class="timer-front__top timer-hrs__front">
+                <p class="timer-hrs__front-txt timer-txt">00</p>
+              </div>
+              <div class="timer-front__bot timer-hrs__front">
+                <p class="timer-hrs__front-txt timer-txt">00</p>
+              </div>
+            </div>
+          </div>
+          <p class="timer-box__txt">Hours</p>
+        </div>
+        <!-- mins -->
+
+        <div class="timer-box">
+          <div class="timer">
+            <div class="timer-back timer-min">
+              <div class="timer-back__top timer-min__back">
+                <p class="timer-min__back-txt timer-txt">00</p>
+              </div>
+              <div class="timer-back__bot timer-min__back">
+                <p class="timer-min__back-txt timer-txt">00</p>
+              </div>
+            </div>
+
+            <div class="timer-front timer-min">
+              <div class="timer-front__top timer-min__front">
+                <p class="timer-min__front-txt timer-txt">00</p>
+              </div>
+              <div class="timer-front__bot timer-min__front">
+                <p class="timer-min__front-txt timer-txt">00</p>
+              </div>
+            </div>
+          </div>
+          <p class="timer-box__txt">Minutes</p>
+        </div>
+
+        <!-- sec -->
+
+        <div class="timer-box">
+          <div class="timer">
+            <div class="timer-back timer-sec">
+              <div class="timer-back__top timer-sec__back">
+                <p class="timer-sec__back-txt timer-txt">00</p>
+              </div>
+              <div class="timer-back__bot timer-sec__back">
+                <p class="timer-sec__back-txt timer-txt">00</p>
+              </div>
+            </div>
+
+            <div class="timer-front timer-sec">
+              <div class="timer-front__top timer-sec__front">
+                <p class="timer-sec__front-txt timer-txt">00</p>
+              </div>
+              <div class="timer-front__bot timer-sec__front">
+                <p class="timer-sec__front-txt timer-txt">00</p>
+              </div>
+            </div>
+          </div>
+          <p class="timer-box__txt">Seconds</p>
+        </div>
+      </div>
+    </div>
+    <div class="soc">
+      <div class="soc-box">
+        <img
+          src="images/icon-facebook.svg"
+          alt="facebook logo"
+          class="soc-box__img"
+        />
+        <img
+          src="images/icon-pinterest.svg"
+          alt="pinterest logo"
+          class="soc-box__img"
+        />
+        <img
+          src="images/icon-instagram.svg"
+          alt="instagram logo"
+          class="soc-box__img"
+        />
+      </div>
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">venkatesh.b</a>.
+      </div>
+    </div>
+  </body>
+</html>
